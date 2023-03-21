@@ -10,7 +10,7 @@ export class CronLoggerLambda extends Construct{
       super(scope, id);
         this.lambda = new NodejsFunction(this, `${id}-lambda`, {
           runtime: Runtime.NODEJS_18_X,
-          entry: path.join(__dirname, `../../src/controller/cron-logger.controller.ts`),
+          entry: path.join(__dirname, `../../../src/controller/cron-logger.controller.ts`),
         });
 
         const myFunctionUrl = this.lambda.addFunctionUrl({
